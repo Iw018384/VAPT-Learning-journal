@@ -95,3 +95,16 @@ Version numbers reveal software age = known vulnerabilities.
 - TryHackMe — guided labs
 - scanme.nmap.org — legal Nmap practice
 - Claude - document everything structurally and present it on social platforms
+
+  ### Day 4 — Gobuster + Nikto
+**Gobuster findings on scanme.nmap.org:**
+- .svn exposed — potential source code leak (Critical)
+- .htpasswd exists — password file present (High)
+- .htaccess exists — configuration file present (Medium)
+- /images/ directory found
+- /shared/ directory found
+
+**Commands learned:**
+- gobuster dir -u URL -w wordlist — basic directory scan
+- gobuster dir -u URL -w wordlist -t 50 — faster with 50 threads
+- nikto -h URL — automated web vulnerability scan
